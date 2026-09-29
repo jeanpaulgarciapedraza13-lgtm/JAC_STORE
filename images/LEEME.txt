@@ -1,0 +1,11 @@
+Coloca aquí tus imágenes:
+
+  images/hero.jpg            → foto grande de portada (horizontal, 1920x1080 aprox.)
+  images/manifiesto.jpg      → foto de la sección "Tactile digitalism" (vertical/cuadrada)
+  images/productos/*.jpg     → una foto por camisa (formato 4:5, ej. 1200x1500)
+
+Los nombres de las fotos de productos se enlazan en js/products.js.
+Si una imagen no existe, la web muestra un fondo elegante en su lugar.
+Consejo: exporta en .jpg o .webp comprimido (menos de 300 KB cada una).
+
+""

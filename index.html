@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>JAC STORE — Streetwear</title>
+    <meta
+      name="description"
+      content="Streetwear de atelier. Camisas exclusivas."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Envío gratis </span><span>Exclusive Drops </span
+        ><span>JAC Store</span><span>Drop</span> <span>Envío gratis</span
+        ><span>Drop</span><span>JAC Store</span><span>Colombia </span>
+        <span>NEW</span><span>limited edition</span><span>Envío gratis </span
+        ><span>Exclusive Drops </span><span>JAC Store</span><span>Drop</span>
+        <span>Envío gratis</span><span>Drop</span><span>JAC Store</span
+        ><span>Colombia </span> <span>NEW</span><span>limited edition</span>
+      </div>
+    </div>
+
+    <header class="nav glass">
+      <a class="logo" href="#top">JAC STORE</a>
+      <nav>
+        <a href="#coleccion">Catalogo</a>
+        <a href="#atelier">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="bag" id="openCart" aria-label="Abrir carrito">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M6 7h12l1 13H5L6 7Z" />
+          <path d="M9 7a3 3 0 0 1 6 0" />
+        </svg>
+        <b id="cartCount" hidden>0</b>
+      </button>
+    </header>
+
+    <main id="top">
+      <!-- HERO: reemplaza images/hero.jpg por tu foto principal -->
+      <section class="hero">
+        <div
+          class="hero__bg"
+          style="--img: url(&quot;images/productos/frente8.jpg&quot;)"
+        ></div>
+        <span class="hero__mark hero__mark--a">JAC</span>
+        <div class="hero__copy">
+          <p class="pill">Exclusive Drops</p>
+          <h1>AL MEJOR ESTILO.</h1>
+          <p>
+            Camisas exclusivas. Streetwear exclusivo, no de catálogo. Viste a la
+            moda.
+          </p>
+          <a class="btn btn--light" href="#coleccion">Ver la colección</a>
+        </div>
+        <span class="hero__mark hero__mark--b">STORE</span>
+      </section>
+
+      <!-- MANIFIESTO: reemplaza images/manifiesto.jpg -->
+      <section class="manifesto" id="atelier">
+        <div class="manifesto__copy">
+          <p class="pill pill--dark">JAC STORE</p>
+          <h2>DESIGNED TO STAND OUT..</h2>
+          <p>
+            No seguimos tendencias. Creamos piezas con identidad. Algodón de
+            alto gramaje, detalles únicos y diseños pensados para destacar.
+          </p>
+          <a class="link" href="#coleccion">Ver la colección</a>
+        </div>
+        <video
+          class="manifesto__img"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="images/productos/frente10.jpeg"
+          aria-label="Video de la colección JAC Store"
+        >
+          <source src="images/productos/video.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <!-- INVENTARIO: se genera desde js/products.js -->
+      <section class="shop" id="coleccion">
+        <div class="shop__head">
+          <div>
+            <p class="pill pill--dark">Selección</p>
+            <h2>Lo nuevo</h2>
+          </div>
+          <span class="count" id="stockLine"></span>
+        </div>
+        <div class="grid" id="grid"></div>
+      </section>
+
+      <section class="cta">
+        <p class="pill">LA MEJOR CALIDAD</p>
+        <h2>Una pieza. Una actitud.</h2>
+        <a class="btn btn--dark" href="#coleccion">Explorar la colección</a>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacto">
+      <div class="footer__top">
+        <div>
+          <a class="logo logo--xl" href="#top">JAC STORE</a>
+          <p class="muted">
+            Streetwear de atelier, tejidas para perdurar, no para aburrir.
+          </p>
+        </div>
+        <div class="footer__cols">
+          <div>
+            <h4>Contacto</h4>
+            <a href="mailto:hola@jastore.co">hola@jastore.co</a>
+            <a href="#" id="waLink" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="#" target="_blank" rel="noopener">Instagram</a>
+          </div>
+          <div>
+            <h4>Compra</h4>
+            <span>Envíos a todo el país</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 JAC STORE</span><span>EXCLUSIVE DROPS</span>
+      </div>
+    </footer>
+
+    <!-- Sheets estilo iOS -->
+    <div class="scrim" id="scrim"></div>
+
+    <aside
+      class="sheet"
+      id="productSheet"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Detalle de la camisa"
+    >
+      <div class="sheet__grab"></div>
+      <button class="sheet__close" data-close aria-label="Cerrar">✕</button>
+      <div class="sheet__img" id="pImg"></div>
+      <div
+        class="thumbs"
+        id="pThumbs"
+        role="tablist"
+        aria-label="Vista de la camisa"
+      ></div>
+      <div class="sheet__body">
+        <p class="pill pill--dark" id="pNum"></p>
+        <h3 id="pName"></h3>
+        <p class="sheet__price" id="pPrice"></p>
+        <p class="sheet__desc" id="pDesc"></p>
+        <div
+          class="sizes"
+          id="pSizes"
+          role="radiogroup"
+          aria-label="Talla"
+        ></div>
+        <button class="btn btn--dark btn--full" id="pAdd">
+          Agregar al carrito
+        </button>
+      </div>
+    </aside>
+
+    <aside
+      class="sheet sheet--cart"
+      id="cartSheet"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Carrito"
+    >
+      <div class="sheet__grab"></div>
+      <button class="sheet__close" data-close aria-label="Cerrar">✕</button>
+      <div class="sheet__body">
+        <h3>Tu carrito</h3>
+        <div id="cartList"></div>
+        <div class="cart__total">
+          <span>Total</span><b id="cartTotal">$0</b>
+        </div>
+        <a
+          class="btn btn--dark btn--full"
+          id="checkout"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          >Pedir por WhatsApp</a
+        >
+      </div>
+    </aside>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
