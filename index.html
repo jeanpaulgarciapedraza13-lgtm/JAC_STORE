@@ -35,7 +35,7 @@
     <header class="nav glass">
       <a class="logo" href="#top">JAC STORE</a>
       <nav>
-        <a href="#coleccion">Catalogo</a>
+        <a href="#coleccion">Catálogo</a>
         <a href="#atelier">Nosotros</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -60,10 +60,18 @@
     <main id="top">
       <!-- HERO: reemplaza images/hero.jpg por tu foto principal -->
       <section class="hero">
-        <div
-          class="hero__bg"
-          style="--img: url(&quot;images/productos/frente8.jpg&quot;)"
-        ></div>
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="images/productos/frente8.jpg"
+          aria-label="Video de la marca JAC Store"
+        >
+          <source src="images/productos/video.mp4" type="video/mp4" />
+        </video>
         <span class="hero__mark hero__mark--a">JAC</span>
         <div class="hero__copy">
           <p class="pill">Exclusive Drops</p>
@@ -80,26 +88,31 @@
       <!-- MANIFIESTO: reemplaza images/manifiesto.jpg -->
       <section class="manifesto" id="atelier">
         <div class="manifesto__copy">
-          <p class="pill pill--dark">JAC STORE</p>
-          <h2>DESIGNED TO STAND OUT..</h2>
+          <p class="pill pill--dark">Nuestra esencia</p>
+          <h2>No vestimos para encajar.</h2>
           <p>
-            No seguimos tendencias. Creamos piezas con identidad. Algodón de
-            alto gramaje, detalles únicos y diseños pensados para destacar.
+            Diseñamos streetwear con carácter: siluetas oversize, detalles que
+            hablan por sí solos y piezas creadas para destacar. Cada drop llega
+            en unidades limitadas.
           </p>
+          <ul class="manifesto__values" aria-label="Lo que define JAC Store">
+            <li>Diseño con identidad</li>
+            <li>Drops limitados</li>
+            <li>Detalles cuidados</li>
+          </ul>
           <a class="link" href="#coleccion">Ver la colección</a>
         </div>
-        <video
-          class="manifesto__img"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="metadata"
-          poster="images/productos/frente10.jpeg"
-          aria-label="Video de la colección JAC Store"
-        >
-          <source src="images/productos/video.mp4" type="video/mp4" />
-        </video>
+        <figure class="manifesto__visual">
+          <img
+            class="manifesto__img"
+            src="images/productos/Gspeed S.png"
+            alt="Camiseta GodSpeed, parte de los drops limitados de JAC Store"
+          />
+          <figcaption class="manifesto__caption">
+            <span>JAC STORE · DROP EXCLUSIVE</span>
+            <strong>GODSPEED</strong>
+          </figcaption>
+        </figure>
       </section>
 
       <!-- INVENTARIO: se genera desde js/products.js -->
@@ -122,25 +135,121 @@
     </main>
 
     <footer class="footer" id="contacto">
-      <div class="footer__top">
+      <div class="footer__brand">
         <div>
           <a class="logo logo--xl" href="#top">JAC STORE</a>
           <p class="muted">
             Streetwear de atelier, tejidas para perdurar, no para aburrir.
           </p>
         </div>
-        <div class="footer__cols">
-          <div>
-            <h4>Contacto</h4>
-            <a href="mailto:hola@jastore.co">hola@jastore.co</a>
-            <a href="#" id="waLink" target="_blank" rel="noopener">WhatsApp</a>
-            <a href="#" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="footer__grid">
+        <section class="footer__column" aria-labelledby="footer-buy">
+          <h4 id="footer-buy">Comprar</h4>
+          <a href="#coleccion">Novedades</a>
+          <a href="#coleccion">Mujer</a>
+          <a href="#coleccion">Hombre</a>
+          <a href="#coleccion">Accesorios</a>
+          <a href="#coleccion">Ofertas</a>
+        </section>
+        <section class="footer__column" aria-labelledby="footer-help">
+          <h4 id="footer-help">Ayuda</h4>
+          <a
+            href="#"
+            data-whatsapp-link
+            data-whatsapp-message="Hola, quiero consultar el seguimiento de mi pedido."
+            target="_blank"
+            rel="noopener"
+            >Seguimiento de pedido</a
+          >
+          <a
+            href="#"
+            data-whatsapp-link
+            data-whatsapp-message="Hola, quisiera información sobre envíos y entregas."
+            target="_blank"
+            rel="noopener"
+            >Envíos y entregas</a
+          >
+          <a
+            href="#"
+            data-whatsapp-link
+            data-whatsapp-message="Hola, quisiera información sobre devoluciones."
+            target="_blank"
+            rel="noopener"
+            >Devoluciones</a
+          >
+          <a
+            href="#"
+            data-whatsapp-link
+            data-whatsapp-message="Hola, quisiera ayuda con la guía de tallas."
+            target="_blank"
+            rel="noopener"
+            >Guía de tallas</a
+          >
+          <a href="mailto:jcastore0@gmail.com">Contacto</a>
+        </section>
+        <section class="footer__column" aria-labelledby="footer-company">
+          <h4 id="footer-company">Compañía</h4>
+          <a href="#atelier">Sobre nosotros</a>
+          <a href="#atelier">Sostenibilidad</a>
+          <a
+            href="mailto:jcastore0@gmail.com?subject=Trabaja%20con%20JAC%20STORE"
+            >Trabaja con nosotros</a
+          >
+          <span class="footer__soon">Blog · Próximamente</span>
+        </section>
+        <section
+          class="footer__column footer__newsletter"
+          aria-labelledby="footer-newsletter"
+        >
+          <h4 id="footer-newsletter">Newsletter</h4>
+          <p>¡Únete al club y obtén un 10% OFF en tu primer pedido!</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <label class="sr-only" for="newsletterEmail"
+              >Correo electrónico</label
+            >
+            <input
+              id="newsletterEmail"
+              name="email"
+              type="email"
+              placeholder="Correo electrónico"
+              autocomplete="email"
+              required
+            />
+            <button type="submit">Unirse</button>
+          </form>
+          <div class="footer__socials" aria-label="Redes sociales">
+            <a
+              href="https://www.instagram.com/jac_store0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram de JAC STORE"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle class="social-dot" cx="17.5" cy="6.5" r="1" />
+              </svg>
+            </a>
+            <a
+              id="waLink"
+              href="#"
+              data-whatsapp-link
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp de JAC STORE"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M20.2 11.8a8.2 8.2 0 0 1-12.1 7.2L3 20l1.1-4.9A8.2 8.2 0 1 1 20.2 11.8Z"
+                />
+                <path
+                  d="M8.4 7.9c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .6.5.9 1.2 1.5 2.1 2 .2.1.4.1.6-.1l.8-.9c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.3.6-.1.4-.3 1.1-.8 1.4-.5.4-1.2.6-1.8.4-.6-.1-1.5-.4-2.7-1.1-1.4-.8-2.4-1.9-3-2.9-.6-.9-.8-1.8-.7-2.4.1-.6.6-1.2 1.1-1.4Z"
+                />
+              </svg>
+            </a>
           </div>
-          <div>
-            <h4>Compra</h4>
-            <span>Envíos a todo el país</span>
-          </div>
-        </div>
+        </section>
       </div>
       <div class="footer__bottom">
         <span>© 2026 JAC STORE</span><span>EXCLUSIVE DROPS</span>

@@ -274,8 +274,32 @@ function toast(t) {
 }
 
 /* ---------- WhatsApp ---------- */
-$("#waLink").href = `https://wa.me/${WHATSAPP}`;
+document.querySelectorAll("[data-whatsapp-link]").forEach(link => {
+  const message = link.dataset.whatsappMessage;
+  const query = message ? `?text=${encodeURIComponent(message)}` : "";
+  link.href = `https://wa.me/${WHATSAPP}${query}`;
+});
+
+/* ---------- Newsletter ---------- */
+$("#newsletterForm").addEventListener("submit", event => {
+  event.preventDefault();
+  const email = $("#newsletterEmail").value.trim();
+  const subject = encodeURIComponent("Suscripción al newsletter JAC STORE");
+  const body = encodeURIComponent(
+    `Quiero unirme al club de JAC STORE. Mi correo es: ${email}`
+  );
+
+  window.location.href = `mailto:jcastore0@gmail.com?subject=${subject}&body=${body}`;
+});
 
 /* ---------- Inicio ---------- */
+const siteNav = document.querySelector(".nav");
+const updateNavVisibility = () => {
+  siteNav.classList.toggle("nav--scrolled", window.scrollY > 120);
+};
+
+addEventListener("scroll", updateNavVisibility, { passive: true });
+updateNavVisibility();
+
 renderGrid();
 updateCart();

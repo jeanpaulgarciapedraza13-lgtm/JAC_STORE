@@ -32,7 +32,7 @@ const PRODUCTS = [
      "images/productos/frente2.jpg",
      "images/productos/respaldo2.jpg",
     ],
-    descripcion: "Corte oversize, costura reforzada.",
+    descripcion: "Camiseta GodSpeed de algodón de 290 GSM, con corte oversize, detalles en pedrería y herrajes. Un diseño con presencia por delante y por detrás, disponible en unidades limitadas.",
     tallas: ["S"],
     stock: 1
   },
@@ -45,7 +45,7 @@ const PRODUCTS = [
      "images/productos/frente3.jpg",
      "images/productos/respaldo3.jpg",
     ],
-    descripcion: "Corte oversize, costura reforzada.",
+    descripcion: "Camiseta Hellstar de algodón de 290 GSM, con corte oversize, detalles en pedrería y herrajes. Un diseño con presencia por delante y por detrás, disponible en unidades limitadas.",
     tallas: ["M"],
     stock: 1
   },{
@@ -57,7 +57,7 @@ const PRODUCTS = [
      "images/productos/frente4.jpg",
      "images/productos/respaldo4.jpg",
     ],
-    descripcion: "Corte oversize, costura reforzada.",
+    descripcion: "Camiseta Hellstar de algodón de 290 GSM, con corte oversize, detalles en pedrería y herrajes. Un diseño con presencia por delante y por detrás, disponible en unidades limitadas.",
     tallas: ["XL"],
     stock: 1
   },{
@@ -69,7 +69,7 @@ const PRODUCTS = [
      "images/productos/frente5.png",
      "images/productos/respaldo5.png",
     ],
-    descripcion: "Corte oversize, costura reforzada.",
+    descripcion: "Camiseta Hellstar de algodón de 290 GSM, con corte oversize, detalles en pedrería y herrajes. Un diseño con presencia por delante y por detrás, disponible en unidades limitadas.",
     tallas: ["L"],
     stock: 1
   },{
@@ -81,7 +81,7 @@ const PRODUCTS = [
      "images/productos/frente6.png",
      "images/productos/respaldo6.png",
     ],
-    descripcion: "Corte oversize, costura reforzada.",
+    descripcion: "Camiseta Mixed Emotion de algodón de 290 GSM, con corte oversize, detalles en pedrería y herrajes. Un diseño con presencia por delante y por detrás, disponible en unidades limitadas.",
     tallas: ["L"],
     stock: 1
   },{
@@ -93,7 +93,7 @@ const PRODUCTS = [
      "images/productos/frente7.jpg",
      "images/productos/respaldo7.jpg",
     ],
-    descripcion: "Corte oversize, costura reforzada.",
+    descripcion: "Camiseta Hellstar de algodón de 290 GSM, con corte oversize, detalles en pedrería y herrajes. Un diseño con presencia por delante y por detrás, disponible en unidades limitadas.",
     tallas: ["M"],
     stock: 1
   },{
@@ -105,7 +105,7 @@ const PRODUCTS = [
      "images/productos/frente8.jpg",
      "images/productos/respaldo8.jpeg",
     ],
-    descripcion: "Corte oversize, costura reforzada.",
+    descripcion: "Camiseta GodSpeed de algodón de 290 GSM, con corte oversize, detalles en pedrería y herrajes. Un diseño con presencia por delante y por detrás, disponible en unidades limitadas.",
     tallas: ["XL"],
     stock: 1
   },{
@@ -117,7 +117,7 @@ const PRODUCTS = [
      "images/productos/frente9.jpg",
      "images/productos/respaldo9.jpg",
     ],
-    descripcion: "Corte oversize, costura reforzada.",
+    descripcion: "Camiseta GodSpeed de algodón de 290 GSM, con corte oversize, detalles en pedrería y herrajes. Un diseño con presencia por delante y por detrás, disponible en unidades limitadas.",
     tallas: ["S"],
     stock: 1
   },{
@@ -129,7 +129,7 @@ const PRODUCTS = [
      "images/productos/frente10.jpeg",
      "images/productos/respaldo10.jpg",
     ],
-    descripcion: "Corte oversize, costura reforzada.",
+    descripcion: "Camiseta Hellstar de algodón de 290 GSM, con corte oversize, detalles en pedrería y herrajes. Un diseño con presencia por delante y por detrás, disponible en unidades limitadas.",
     tallas: ["L"],
     stock: 1
   },
