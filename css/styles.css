@@ -1,13 +1,14 @@
 :root {
-  --ink: #171717;
-  --paper: #efeee9;
-  --card: #f7f5f1;
-  --line: rgba(23, 23, 23, 0.09);
-  --red: #d4493d;
-  --muted: #67615e;
+  --ink: #111111;
+  --paper: #eeebe5;
+  --card: #f7f3ee;
+  --line: rgba(17, 17, 17, 0.08);
+  --red: #d6473b;
+  --red-deep: #ba2d24;
+  --muted: #625d5a;
   --display: "Anton", "Impact", sans-serif;
   --text: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-  --r-lg: 26px;
+  --r-lg: 28px;
   --r-md: 18px;
   --r-sm: 12px;
   --spring: cubic-bezier(0.32, 0.72, 0, 1);
@@ -217,7 +218,9 @@ h2 {
   position: relative;
   margin-top: -42px;
   min-height: 72svh;
-  background: #0a0a0a;
+  background:
+    linear-gradient(135deg, rgba(11, 11, 11, 0.85), rgba(11, 11, 11, 0.55)),
+    #0a0a0a;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -227,13 +230,33 @@ h2 {
   overflow: hidden;
   isolation: isolate;
   border-radius: 0 0 30px 30px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.12), transparent 36%);
+  pointer-events: none;
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(1) contrast(1.15) brightness(0.52);
+  transform: scale(1.06);
 }
 .hero__mark {
+  position: relative;
+  z-index: 1;
   font-family: var(--display);
   line-height: 0.82;
   font-size: clamp(72px, 12vw, 170px);
   text-transform: uppercase;
   opacity: 0.96;
+  letter-spacing: 0.02em;
 }
 .hero__mark--a {
   align-self: flex-start;
@@ -242,10 +265,22 @@ h2 {
   align-self: flex-end;
 }
 .hero__copy {
+  position: relative;
+  z-index: 1;
   max-width: 440px;
   display: grid;
   gap: 14px;
   justify-items: start;
+}
+.hero__copy h1 {
+  font-size: clamp(44px, 6vw, 78px);
+  letter-spacing: 0.03em;
+  line-height: 0.9;
+}
+.hero__copy p:last-of-type {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 32ch;
 }
 /* Único momento animado: entrada del hero */
 .hero__mark,
@@ -284,10 +319,15 @@ h2 {
   gap: 16px;
   justify-items: start;
 }
+.manifesto__copy h2 {
+  font-size: clamp(40px, 6vw, 78px);
+  letter-spacing: 0.02em;
+}
 .manifesto__copy p:not(.pill) {
   color: var(--muted);
   max-width: 38ch;
   font-size: 15px;
+  line-height: 1.6;
 }
 .manifesto__img {
   aspect-ratio: 1/1;
@@ -329,7 +369,10 @@ h2 {
   box-shadow:
     0 1px 0 var(--line),
     0 16px 36px -24px rgba(0, 0, 0, 0.28);
-  transition: transform 0.35s var(--spring), box-shadow 0.35s ease;
+  transition:
+    transform 0.35s var(--spring),
+    box-shadow 0.35s ease;
+  border: 1px solid rgba(17, 17, 17, 0.02);
 }
 .card:hover {
   transform: translateY(-3px);
@@ -346,6 +389,7 @@ h2 {
   background: linear-gradient(160deg, #2b2b2b, #0c0c0c);
   display: grid;
   place-items: center;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 .card__img img {
   position: absolute;
@@ -364,10 +408,10 @@ h2 {
   top: 10px;
   left: 10px;
   font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   color: #fff;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(17, 17, 17, 0.5);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   padding: 5px 10px;
@@ -378,13 +422,14 @@ h2 {
   bottom: 10px;
   left: 10px;
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #fff;
-  background: var(--red);
+  background: linear-gradient(135deg, var(--red), var(--red-deep));
   padding: 5px 10px;
   border-radius: 99px;
+  box-shadow: 0 8px 16px rgba(214, 71, 59, 0.25);
 }
 .card--out .card__img img {
   filter: grayscale(1) brightness(0.7);
@@ -415,16 +460,17 @@ h2 {
 
 /* Cierre */
 .cta {
-  background: var(--red);
+  background: linear-gradient(135deg, var(--red), var(--red-deep));
   color: #fff;
   text-align: center;
   padding: clamp(48px, 8vw, 72px) var(--pad);
   display: grid;
   gap: 16px;
   justify-items: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 .cta .pill {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.18);
 }
 
 /* Footer */
