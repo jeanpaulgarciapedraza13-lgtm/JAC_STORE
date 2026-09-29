@@ -150,7 +150,8 @@ h2 {
   position: sticky;
   top: 12px;
   z-index: 30;
-  margin: 12px var(--pad) 0;
+  width: min(1320px, calc(100% - (var(--pad) * 2)));
+  margin: 12px auto 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -217,6 +218,7 @@ h2 {
 .hero {
   position: relative;
   margin-top: -42px;
+  width: min(1320px, calc(100% - (var(--pad) * 2)));
   min-height: 72svh;
   background:
     linear-gradient(135deg, rgba(11, 11, 11, 0.85), rgba(11, 11, 11, 0.55)),
@@ -231,12 +233,18 @@ h2 {
   isolation: isolate;
   border-radius: 0 0 30px 30px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.12), transparent 36%);
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(255, 255, 255, 0.12),
+    transparent 36%
+  );
   pointer-events: none;
 }
 .hero__bg {
@@ -312,6 +320,8 @@ h2 {
   grid-template-columns: 1fr 1.08fr;
   gap: clamp(20px, 4vw, 48px);
   align-items: center;
+  width: min(1320px, calc(100% - (var(--pad) * 2)));
+  margin: 0 auto;
   padding: clamp(42px, 7vw, 84px) var(--pad) 20px;
 }
 .manifesto__copy {
@@ -340,6 +350,8 @@ h2 {
 
 /* Tienda */
 .shop {
+  width: min(1320px, calc(100% - (var(--pad) * 2)));
+  margin: 0 auto;
   padding: 0 var(--pad) clamp(42px, 7vw, 80px);
 }
 .shop__head {
@@ -463,6 +475,8 @@ h2 {
   background: linear-gradient(135deg, var(--red), var(--red-deep));
   color: #fff;
   text-align: center;
+  width: min(1320px, calc(100% - (var(--pad) * 2)));
+  margin: 0 auto;
   padding: clamp(48px, 8vw, 72px) var(--pad);
   display: grid;
   gap: 16px;
@@ -477,6 +491,8 @@ h2 {
 .footer {
   background: var(--ink);
   color: #fff;
+  width: min(1320px, calc(100% - (var(--pad) * 2)));
+  margin: 0 auto;
   padding: clamp(38px, 6vw, 64px) var(--pad) 26px;
 }
 .footer__top {
@@ -700,12 +716,29 @@ h2 {
   transform: translate(-50%, 0);
 }
 
+@media (min-width: 980px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    gap: 22px;
+  }
+  .card__name {
+    font-size: 20px;
+  }
+  .card__price {
+    font-size: 13px;
+  }
+  .manifesto__copy {
+    padding-right: 18px;
+  }
+}
+
 @media (max-width: 760px) {
   .nav nav {
     display: none;
   }
   .nav {
     margin-inline: 12px;
+    width: calc(100% - 24px);
   }
   .manifesto {
     grid-template-columns: 1fr;
@@ -717,6 +750,7 @@ h2 {
   .hero {
     min-height: 62svh;
     padding-top: 100px;
+    width: calc(100% - 24px);
   }
   .hero__mark--a {
     top: 96px;
