@@ -276,6 +276,33 @@ h2 {
   opacity: 1;
   pointer-events: none;
 }
+.hero__video-retry {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  background: rgba(10, 10, 10, 0.72);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transform: translateX(-50%);
+}
+.hero__video-retry[hidden] {
+  display: none;
+}
+.hero__video-retry:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
 .hero__mark {
   position: relative;
   z-index: 1;

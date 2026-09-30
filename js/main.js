@@ -293,6 +293,33 @@ $("#newsletterForm").addEventListener("submit", event => {
 });
 
 /* ---------- Inicio ---------- */
+const heroVideo = $("#brandVideo");
+const heroVideoRetry = $("#heroVideoRetry");
+
+if (heroVideo && heroVideoRetry) {
+  const playHeroVideo = () => {
+    const playAttempt = heroVideo.play();
+    if (playAttempt) {
+      playAttempt.catch(() => {
+        heroVideoRetry.hidden = false;
+      });
+    }
+  };
+
+  heroVideo.addEventListener("playing", () => {
+    heroVideoRetry.hidden = true;
+  });
+  heroVideoRetry.addEventListener("click", playHeroVideo);
+  document.addEventListener("pointerdown", playHeroVideo, {
+    once: true,
+    passive: true
+  });
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") playHeroVideo();
+  });
+  playHeroVideo();
+}
+
 const siteNav = document.querySelector(".nav");
 const updateNavVisibility = () => {
   siteNav.classList.toggle("nav--scrolled", window.scrollY > 120);

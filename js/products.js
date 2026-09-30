@@ -14,7 +14,7 @@ const PRODUCTS = [
     id: "ja-01",
     numero: "01/10",
     nombre: "GodSpeed ",
-    precio: 120000,
+    precio: 100000,
     imagenes: [
     "images/productos/Gspeed S.png",
     "images/productos/Respaldo S.png"
@@ -27,7 +27,7 @@ const PRODUCTS = [
     id: "ja-02",
     numero: "02/10",
     nombre: "GodSpeed ",
-    precio: 120000,
+    precio: 100000,
     imagenes:[
      "images/productos/frente2.jpg",
      "images/productos/respaldo2.jpg",
@@ -40,7 +40,7 @@ const PRODUCTS = [
     id: "ja-03",
     numero: "03/10",
     nombre: "Hellstar ",
-    precio: 120000,
+    precio: 100000,
     imagenes:[
      "images/productos/frente3.jpg",
      "images/productos/respaldo3.jpg",
@@ -52,7 +52,7 @@ const PRODUCTS = [
     id: "ja-04",
     numero: "04/10",
     nombre: "Hellstar ",
-    precio: 120000,
+    precio: 100000,
     imagenes:[
      "images/productos/frente4.jpg",
      "images/productos/respaldo4.jpg",
@@ -64,7 +64,7 @@ const PRODUCTS = [
     id: "ja-05",
     numero: "05/10",
     nombre: "Hellstar",
-    precio: 120000,
+    precio: 100000,
     imagenes:[
      "images/productos/frente5.png",
      "images/productos/respaldo5.png",
@@ -76,7 +76,7 @@ const PRODUCTS = [
     id: "ja-06",
     numero: "06/10",
     nombre: "mixed emotion",
-    precio: 120000,
+    precio: 100000,
     imagenes:[
      "images/productos/frente6.png",
      "images/productos/respaldo6.png",
@@ -88,7 +88,7 @@ const PRODUCTS = [
     id: "ja-07",
     numero: "07/10",
     nombre: "Hellstar ",
-    precio: 120000,
+    precio: 100000,
     imagenes:[
      "images/productos/frente7.jpg",
      "images/productos/respaldo7.jpg",
@@ -100,7 +100,7 @@ const PRODUCTS = [
     id: "ja-08",
     numero: "08/10",
     nombre: "GodSpeed ",
-    precio: 120000,
+    precio: 100000,
     imagenes:[
      "images/productos/frente8.jpg",
      "images/productos/respaldo8.jpeg",
@@ -112,7 +112,7 @@ const PRODUCTS = [
     id: "ja-09",
     numero: "09/10",
     nombre: "GodSpeed ",
-    precio: 120000,
+    precio: 100000,
     imagenes:[
      "images/productos/frente9.jpg",
      "images/productos/respaldo9.jpg",
@@ -124,7 +124,7 @@ const PRODUCTS = [
     id: "ja-10",
     numero: "10/10",
     nombre: "Hellstar",
-    precio: 120000,
+    precio: 100000,
     imagenes:[
      "images/productos/frente10.jpeg",
      "images/productos/respaldo10.jpg",
